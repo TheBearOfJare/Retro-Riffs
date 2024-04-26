@@ -1,0 +1,190 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#sequence_editor {
+	display: none;
+	
+}
+span {
+	line-height: 36px;
+}
+#sequence_grid {
+	width: fit-content;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-top: -300;
+	margin-left: -50;
+}
+
+
+#sequence_render_button {
+	float: right;
+	z-index: 2;
+	position: sticky;
+	top: 10px;
+}
+
+#track_play_pause {
+	float: left;
+	z-index: 2;
+	position: sticky;
+	top: 10px;
+}
+
+.beat_lables > * {
+	margin-left: 125px;
+}
+.beat_lables :first {
+    margin-left: 160px;
+}
+
+
+#three_beat_lables {
+	display: none;
+}
+
+.genericslider {
+	width: 100%;
+	text-align: center;
+}
+input[type="range"] {
+	width: 100%;
+}
+
+
+
+/* Customize the label (the container) */
+.container {
+  display: inline-block;
+  padding-left: 4px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+.container input {
+
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.notebox {
+	display:block;
+	
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .notebox {
+  background-color: #ccc;
+}
+
+.container:hover input:checked ~ .notebox {
+  background-color: #ff6c47;
+}
+
+.container input:checked ~ .notebox {
+  background-color: #f34a20;
+}
+
+.container:hover input[name="tied"] ~ .notebox {
+	background-color: #319637
+}
+
+.container input[name="tied"] ~ .notebox {
+	background-color: #28772d
+}
+
+
+
+#loading_screen {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 192, 192, 0.5);
+  background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#page {
+	display: none;
+}
+
+
+/* Double slider not by me */
+
+section.range-slider {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+section.range-slider span {
+	line-height: 2px;
+	text-align: center;
+}
+
+section.range-slider input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    width: 100%;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+	background: none transparent;
+}
+
+section.range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+	background: none transparent;
+}
+
+section.range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+	background: rgba(0,0,0,1);
+}
+
+section.range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+}
+section.range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: rgba(0,0,0,1);
+    border: 0;
+}
+  section.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+	  background: rgba(0,0,0,1);
+}
+
